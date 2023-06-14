@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Text, View, TextInput, Button } from 'react-native';
 import { useDispatch, useSelector } from "react-redux";
-import { setMessages } from "./RTKMessageSlice";
+import { setMessages } from "./MessageSlice";
 
 export default function MessagingScreen() {
 

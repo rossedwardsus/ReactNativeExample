@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import colorSlice from "./MessageSlice";
+import messageSlice from "./RTKMessageSlice";
 
 export const store = configureStore({
   reducer: { 
-    color: colorSlice,
+    color: messageSlice,
   },
 });

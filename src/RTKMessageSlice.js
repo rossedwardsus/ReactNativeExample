@@ -15,7 +15,7 @@ const randomRgb = () => {
 };
 
 //State slice
-export const colorSlice = createSlice({
+export const messagesSlice = createSlice({
   name: "color",
   initialState,
   reducers: {
@@ -27,6 +27,6 @@ export const colorSlice = createSlice({
 });
 
 // Action creators are automatically generated for each case reducer function 
-export const { setMessages } = colorSlice.actions;
+export const { setMessages } = messagesSlice.actions;
 
-export default colorSlice.reducer;
+export default messagesSlice.reducer;

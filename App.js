@@ -4,12 +4,14 @@ import { Button, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { store } from "./src/Store";
+import { store } from "./src/RTKStore";
 import { Provider } from "react-redux";
 //import { HomeScreen } from './src/HomeScreen';
+
 import TabScreen from './src/TabScreen';
 import CameraScreen from './src/CameraScreen';
-import MessagingScreen from './src/MessagingScreen';
+import MessagingScreen from './src/RTKMessagingScreen';
+import ReactHookFormScreen from './src/ReactHookFormScreen';
 
 function HomeScreen() {
   return (
@@ -48,6 +50,7 @@ function AddsScreen() {
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Add photo!</Text>
       <Text>Add message!</Text>
+      <Text>ReactHookForm!</Text>
     </View>
   );
 }
@@ -90,6 +93,10 @@ function HomeScreen1({ navigation }) {
         title="Go to messaging screen"
         onPress={() => navigation.navigate('MessagingScreen')}
       />
+       <Button
+        title="Go to react hook form screen"
+        onPress={() => navigation.navigate('ReactHookFormScreen')}
+      />
     </View>
   );
 }
@@ -105,6 +112,7 @@ export default function App({ navigation }) {
             <Stack.Screen name="TabScreen" component={TabScreen} />
             <Stack.Screen name="CameraScreen" component={CameraScreen} />
             <Stack.Screen name="MessagingScreen" component={MessagingScreen} />
+            <Stack.Screen name="ReactHookFormScreen" component={ReactHookFormScreen} />
           </Stack.Navigator>
         </NavigationContainer>
     </Provider>
